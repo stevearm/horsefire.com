@@ -1,0 +1,109 @@
+body {
+	background: #cfcfcf;
+	color: #333333;
+	font:x-small Georgia Serif;
+	font-size/* */:/**/small;
+	font-size: /**/small;
+}
+
+#wrapper {
+	background: #ffffff;
+	width: 900px;
+	margin: 5px auto;
+	padding-top: 5px;
+}
+
+#header {
+	background: #cfcfcf;
+	margin: 0px 5px;
+	padding: 20px;
+	height: 100px;
+	color:#cccccc;
+}
+#header .title {
+	line-height:1.2em;
+	text-transform:capitalize;
+	letter-spacing:.1em;
+	font-weight: normal;
+	font-family:'Book Antiqua', 'Palatino Linotype', 'Trebuchet MS',Sans-Serif;
+	font-size: 250%;
+	color:#fafafa;
+}
+#header .description {
+	margin: 0px 20px;
+	text-transform:uppercase;
+	letter-spacing:.2em;
+	line-height: 1.4em;
+	font: normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+	color: #222222;
+}
+
+#navigation {
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	color: #111111;
+}
+
+.nav-section {
+	background: #cfcfcf;
+	margin: 5px 0px;
+	padding: 8px;
+}
+
+.nav-section .nav-title {
+	font-family: 'Georgia', 'Trebuchet MS',Sans-Serif;
+	font-size: 90%;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #FC7676;
+}
+
+.nav-section ul {
+	margin: 15px 0 0 0;
+	list-style:none;
+}
+
+a:link {
+color:#3D81EE;
+text-decoration:none;
+}
+a:visited {
+text-decoration:none;
+}
+a:hover {
+color:#aa5557;
+text-decoration:underline;
+}
+a img {
+border-width:0;
+}
+
+#content {
+	width: 680px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px;
+}
+
+.post .post-title {
+	margin: 5px;
+}
+
+.post .post-prose {
+	margin: 10px;
+}
+
+.post .post-footer {
+	margin-left: 20px;
+	color: #aaaaaa;
+	font-size: 80%;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.clear {
+	clear:both;
+}
