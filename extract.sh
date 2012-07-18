@@ -1,0 +1,1 @@
+python _posts/staging.py extract

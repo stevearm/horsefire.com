@@ -56,6 +56,10 @@ var render = function(markdownElement, postElement, titleElement, dateElement) {
 	}
 	post = postlines.join('\n');
 	postElement.innerHTML = new Showdown.converter().makeHtml(post);
-	titleElement.innerHTML = metadata.title || "No title specified";
-	dateElement.innerHTML = metadata.date || "No date specified";
+	if (titleElement) {
+		titleElement.innerHTML = metadata.title || "No title specified";
+	}
+	if (dateElement) {
+		dateElement.innerHTML = metadata.date || "No date specified";
+	}
 };

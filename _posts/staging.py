@@ -52,6 +52,7 @@ def stage(template_file, options):
 	i.close()
 	
 	for markdown_file, staging_file in markdown_files.iteritems():
+		print 'Created %s' % staging_file
 		o = open(staging_file, 'w')
 		for line in template_header:
 			o.write('%s\n' % line)
@@ -72,7 +73,6 @@ def stage(template_file, options):
 		for line in template_footer:
 			o.write('%s\n' % line)
 		o.close()
-	print 'Creating staging files in %s' % dir
 
 def extract(options):
 	if not os.path.isdir(dir):
@@ -85,6 +85,7 @@ def extract(options):
 			files['%s/%s' % (dir, file)] = '%s/%s' % (dir, file[:-5])
 	
 	for staging_file, markdown_file in files.iteritems():
+		print 'Extracted %s' % markdown_file
 		i = open(staging_file, 'r')
 		line_number = 0
 		current_line = i.read().splitlines()
@@ -115,13 +116,12 @@ def extract(options):
 		
 		o.close()
 		i.close()
-	print 'Creating markdown files in %s' % dir
 
 def main():
 	p = optparse.OptionParser()
-	p.add_option('--post', '-p', default="document.getElementsByClassName('post_prose')[0]")
-	p.add_option('--title', '-t', default="document.getElementsByClassName('post-title')[0].firstChild")
-	p.add_option('--date', '-d', default="document.getElementsByClassName('date-header')[0].firstChild")
+	p.add_option('--post', '-p')
+	p.add_option('--title', '-t')
+	p.add_option('--date', '-d')
 	options, arguments = p.parse_args()
 	
 	if len(arguments) == 0:
@@ -132,6 +132,14 @@ def main():
 		if len(arguments) == 1:
 			print 'Staging must specify a rendered permapage for a blog entry'
 			return
+		if not options.post:
+			print 'Must specify a javascript selector using --post'
+			return
+		if not options.title:
+			options.title = "null"
+		if not options.date:
+			options.date = "null"
+
 		stage(arguments[1], options)
 	elif mode == 'extract':
 		extract(options)

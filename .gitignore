@@ -1,2 +1,3 @@
 _site
 serve.sh
+_posts/*.markdown.html
