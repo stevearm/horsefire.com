@@ -62,7 +62,7 @@ def stage(template_file, options):
 		for line in i:
 			o.write(line)
 		i.close()
-		o.write('\n%s\n' % markdown_post_tag)
+		o.write('%s\n' % markdown_post_tag)
 		
 		o.write('<script type="text/javascript" src="showdown.js"></script>\n')
 		o.write('<script type="text/javascript" src="staging.js"></script>\n')
@@ -101,7 +101,7 @@ def extract(options):
 				line_number = 0
 		
 		line_number = line_number + 1
-		o = open(markdown_file, 'w')
+		o = open(markdown_file, 'wb')
 		while True:
 			if current_line[line_number] == markdown_post_tag:
 				break
