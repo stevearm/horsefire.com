@@ -11,6 +11,12 @@ The takeaway of this is: I can edit the blog offline on any computer with Dropbo
 
 The problem is images.
 
+Small: <img src="DSCN0291.JPG" class="post-image-small">
+
+Medium: <img src="DSCN0291.JPG" class="post-image-medium">
+
+Large: <img src="DSCN0291.JPG" class="post-image-large">
+
 If I'm out travelling with my laptop but have no internet (while sitting on a train or during a long drive), I want to be able to write the blog post locally, and add in photos I just took. This will require that:
 
 * The staging file allows some kind of image tag to local files
@@ -19,6 +25,6 @@ If I'm out travelling with my laptop but have no internet (while sitting on a tr
 * The Blogofile build edits the image path in the blog post to reference the new image location
 * The Blogofile build could also make the image a link to a larger sized image
 
-The image above was 2.6MB originally, and displayed in the staging file as the right size simply by setting the display height and width. If you're seeing it on the web, it should be displaying "native size" since the build should have resized the file to not waste bandwidth.
+The image above was 2.6MB originally, and displayed in the staging file as the right size simply by setting the display height and width. If you're seeing it on the web, it should be displaying "native size" since the build should have resized the file to not waste bandwidth. <http://horsefire.com>
 
-This post was written before any of the image stuff worked as a way to test it. If you can see the image, it means I got everything working. Horay!
+<sub>This post was written before any of the image stuff worked as a way to test it. If you can see the image, it means I got everything working. Horay!</sub>

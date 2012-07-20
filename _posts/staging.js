@@ -1,5 +1,5 @@
-var render = function(markdownElement, postElement, titleElement, dateElement) {
-	// First, clean up some things
+var initialize = function() {
+	// Fix existing css path
 	var nodes = document.getElementsByTagName('link');
 	for (var i = 0; i < nodes.length; i++) {
 		if (nodes[i].rel == "stylesheet") {
@@ -11,6 +11,8 @@ var render = function(markdownElement, postElement, titleElement, dateElement) {
 			}
 		}
 	}
+	
+	// Fix any broken images
 	var nodes = document.getElementsByTagName('img');
 	for (var i = 0; i < nodes.length; i++) {
 		var url = nodes[i].getAttribute("src");
@@ -20,9 +22,24 @@ var render = function(markdownElement, postElement, titleElement, dateElement) {
 			console.log("Fixing img src from " + url + " to " + newUrl);
 		}
 	}
-	postElement.innerHTML = "post goes here";
 
-	var markdown = markdownElement.innerText.split(/\n/);
+	// Add staging libraries and css
+	var head = document.getElementsByTagName('head')[0];
+	var e = document.createElement('script');
+	e.type = "text/javascript";
+	e.src = "showdown.js";
+	head.appendChild(e);
+
+	var e = document.createElement('link');
+	e.type = "text/css";
+	e.rel = "stylesheet";
+	e.href = "staging.css";
+	head.appendChild(e);
+}
+
+var render = function(markdownElement, postElement, titleElement, dateElement) {
+	postElement.innerHTML = "post goes here";
+	var markdown = markdownElement.innerHTML.split(/\n/);
 
 	var stage=0;
 	var metadata = {};
@@ -62,4 +79,6 @@ var render = function(markdownElement, postElement, titleElement, dateElement) {
 	if (dateElement) {
 		dateElement.innerHTML = metadata.date || "No date specified";
 	}
-};
+}
+
+initialize();
