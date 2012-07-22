@@ -3,7 +3,7 @@ categories: meta
 date: 2012/05/15 11:55:00
 title: Staging blog posts
 ---
-So obviously I haven't done much editing since my last update. I may have 'upgraded' the way I write the blog, but it didn't change how much time I have or how often I have a post I want to write. So it goes.
+So obviously I haven't done much posting since my [last update](/blog/2012/04/17/reclaiming-my-blog/). I may have 'upgraded' the way I write the blog, but it didn't change how much time I have or how often I have a post I want to write. So it goes.
 
 I'm working on making the process even better though, mostly so that then I can transplant it to [another blog](http://blog.steveandcolleen.com). So far, I've got a script that will export a markdown file to an html staging file that contains the markdown and renders it using [showdown.js](https://github.com/coreyti/showdown/). This means I can then edit the staging file using any text editor, save and refresh to see how the blogofile-rendered page will look. The script can then extract the markdown from the staging file back to a markdown file, to be source controlled and deployed as normal.
 
