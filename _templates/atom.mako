@@ -16,7 +16,7 @@
 % for post in posts[:10]:
   <entry>
     <author>
-      <name>${post.author}</name>
+      <name>steve</name>
       <uri>${bf.config.blog.url}</uri>
     </author>
     <title type="html"><![CDATA[${post.title}]]></title>
