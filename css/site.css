@@ -9,6 +9,7 @@ body {
 	width: 900px;
 	margin: 5px auto;
 	padding-top: 5px;
+	border-radius: 10px;
 }
 
 #header {
@@ -16,6 +17,7 @@ body {
 	margin: 0px 5px;
 	height: 140px;
 	color:#cccccc;
+	border-radius: 10px;
 }
 
 #header img {
@@ -52,7 +54,8 @@ body {
 .nav-section {
 	background: #cfcfcf;
 	margin: 5px 0px;
-	padding: 8px;
+	padding: 8px 8px 20px 8px;
+	border-radius: 10px;
 }
 
 .nav-section .nav-title {
