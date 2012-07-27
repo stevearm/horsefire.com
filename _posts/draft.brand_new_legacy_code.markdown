@@ -2,6 +2,7 @@
 categories: legacy, java
 date: 2012/05/15 11:55:00
 title: Creating brand new legacy code
+draft: true
 ---
 Legacy is a bad word in software. Legacy support is always a pain, as fixing bugs in old code is hard. Adding features to old code is even more frustrating, as it means you'll be working with the code longer.
 

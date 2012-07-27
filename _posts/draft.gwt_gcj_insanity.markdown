@@ -2,6 +2,7 @@
 categories: java, code
 date: 2012/05/15 11:55:00
 title: The GCJ/GWT problem
+draft: true
 ---
 Java requirements at compile time
 Java - run time
