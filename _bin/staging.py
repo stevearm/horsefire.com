@@ -16,21 +16,27 @@ Optional arguments:
 import optparse
 import os
 import re
+import shutil
 
-dir = "_posts"
+post_dir = "_posts"
+stage_dir = "_staging"
 markdown_pre_tag = '<div id="markdown" style="display: none"><!-- markdown pre tag -->'
 markdown_post_tag = '</div><!-- markdown post tag -->'
 
 def stage(template_file, options):
-	if not os.path.isdir(dir):
-		print "%s is not a folder" % dir
+	if not os.path.isdir(post_dir):
+		print "%s is not a folder" % post_dir
 		return
+	if not os.path.isdir(stage_dir):
+		os.mkdir(stage_dir)
 	
-	files = os.listdir(dir)
+	files = os.listdir(post_dir)
 	markdown_files = {}
 	for file in files:
 		if file[-9:] == ".markdown":
-			markdown_files['%s/%s' % (dir, file)] = '%s/%s.html' % (dir, file)
+			markdown_files['%s/%s' % (post_dir, file)] = '%s/%s.html' % (stage_dir, file)
+		if file[-5:].lower() == ".jpeg" or file[-4:].lower() == ".jpg":
+			shutil.copyfile('%s/%s' % (post_dir, file), '%s/%s' % (stage_dir, file))
 	
 	template_header = []
 	template_footer = []
@@ -75,14 +81,19 @@ def stage(template_file, options):
 		o.close()
 
 def extract(options):
-	if not os.path.isdir(dir):
-		print "%s is not a folder" % dir
+	if not os.path.isdir(post_dir):
+		print "%s is not a folder" % post_dir
+		return
+	if not os.path.isdir(stage_dir):
+		print "%s is not a folder" % stage_dir
 		return
 	
 	files = {}
-	for file in os.listdir(dir):
+	for file in os.listdir(stage_dir):
 		if file[-14:] == ".markdown.html":
-			files['%s/%s' % (dir, file)] = '%s/%s' % (dir, file[:-5])
+			files['%s/%s' % (stage_dir, file)] = '%s/%s' % (post_dir, file[:-5])
+		if file[-5:].lower() == ".jpeg" or file[-4:].lower() == ".jpg":
+			shutil.copyfile('%s/%s' % (stage_dir, file), '%s/%s' % (post_dir, file))
 	
 	for staging_file, markdown_file in files.iteritems():
 		print 'Extracted %s' % markdown_file

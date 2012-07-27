@@ -1,3 +1,4 @@
 _site
-_posts/*.markdown.html
+_staging/*.markdown.html
+_staging/*.JPG
 *~
