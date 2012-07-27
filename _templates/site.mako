@@ -4,7 +4,7 @@
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 	<head>
 		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
-		<link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAsb+GAP///wA0NYUAqKr/AGtu+QBOULoAT09PAOXtzABTVsIAra2tAM7bpwAAAAAAAAAAAAAAAAAAAAAAAAoiEREioAAAAbs7s7sQAAAzM0OUMzMAA0RTQ5Q1RDAAM1NTlTUzAAAGNVOVU2AAAGVTVVU1VgAAZVNVVTVWAABlu1VVu1YAAGt3tVt3tgAAa3e1W3e2AABou7VYu7YAAAaIVEWIYAAABlVERFVgAAAAZlVVZgAAAAAAZmYAAADgBwAA4AcAAMADAACAAQAAwAMAAOAHAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAAD8PwAA" rel="icon" type="image/x-icon" />
+		<link href="/favicon.ico" rel="icon" type="image/x-icon" />
 		<link rel="alternate" type="application/atom+xml" title="${bf.config.blog.name} - Atom" href="${bf.config.blog.path}/feed/atom/index.xml" />
 		<link rel="alternate" type="application/rss+xml" title="${bf.config.blog.name} - RSS" href="${bf.config.blog.path}/feed/index.xml" />
 
@@ -17,6 +17,7 @@
 
 <div id='wrapper'>
 	<div id='header'>
+		<img src="/logo.jpg"/>
 		<h1 class='title'>${bf.config.blog.name}</h1>
 		<p class='description'>${bf.config.blog.description}</p>
 	</div>
