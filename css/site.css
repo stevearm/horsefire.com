@@ -1,9 +1,7 @@
 body {
 	background: #cfcfcf;
-	color: #333333;
-	font:x-small Georgia Serif;
-	font-size/* */:/**/small;
-	font-size: /**/small;
+	font-size: small;
+	font-family: 'Marmelad', sans-serif;
 }
 
 #wrapper {
@@ -16,26 +14,31 @@ body {
 #header {
 	background: #cfcfcf;
 	margin: 0px 5px;
-	padding: 20px;
-	height: 100px;
+	height: 140px;
 	color:#cccccc;
 }
+
+#header img {
+	float: left;
+	margin-right: 20px;
+}
+
 #header .title {
-	line-height:1.2em;
+	margin: 0px;
+	padding-top: 20px;
+	padding-left: 10px;
 	text-transform:capitalize;
-	letter-spacing:.1em;
-	font-weight: normal;
-	font-family:'Book Antiqua', 'Palatino Linotype', 'Trebuchet MS',Sans-Serif;
-	font-size: 250%;
+	font-family:'Squada One', cursive;
+	font-size: 300%;
 	color:#fafafa;
 }
+
 #header .description {
 	margin: 0px 20px;
-	text-transform:uppercase;
-	letter-spacing:.2em;
-	line-height: 1.4em;
-	font: normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+	padding-top: 5px;
+	padding-left: 180px;
 	color: #222222;
+	letter-spacing: 0.1em;
 }
 
 #navigation {
@@ -53,11 +56,9 @@ body {
 }
 
 .nav-section .nav-title {
-	font-family: 'Georgia', 'Trebuchet MS',Sans-Serif;
 	font-size: 90%;
 	letter-spacing: 0.1em;
 	font-weight: bold;
-	text-transform: capitalize;
 	color: #FC7676;
 }
 
@@ -86,6 +87,7 @@ border-width:0;
 	display: inline-block;
 	vertical-align: top;
 	margin: 5px;
+	font-size: medium;
 }
 
 .post .post-title {
@@ -99,7 +101,7 @@ border-width:0;
 .post .post-footer {
 	margin-left: 20px;
 	color: #aaaaaa;
-	font-size: 80%;
+	font-size: 70%;
 	font-weight: bold;
 	text-transform: uppercase;
 }

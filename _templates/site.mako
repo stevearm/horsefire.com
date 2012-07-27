@@ -10,6 +10,7 @@
 
 		<title>${bf.config.blog.name}</title>
 		<link type="text/css" rel="stylesheet" href="/css/site.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Squada+One|Marmelad' rel='stylesheet' type='text/css'>
 		<%block name="head"/>
 	</head>
 	<body>
