@@ -11,11 +11,11 @@ The takeaway of this is: I can edit the blog offline on any computer with Dropbo
 
 The problem is images.
 
-Small: <img src="DSCN0291.JPG" class="post-image-small">
+Small: <img src="2012-07-15_DSCN0291.JPG" class="post-image-small">
 
-Medium: <img src="DSCN0291.JPG" class="post-image-medium">
+Medium: <img src="2012-07-15_DSCN0291.JPG" class="post-image-medium">
 
-Large: <img src="DSCN0291.JPG" class="post-image-large">
+Large: <img src="2012-07-15_DSCN0291.JPG" class="post-image-large">
 
 If I'm out travelling with my laptop but have no internet (while sitting on a train or during a long drive), I want to be able to write the blog post locally, and add in photos I just took. This will require that:
 
