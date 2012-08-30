@@ -35,7 +35,7 @@ def stage(template_file, options):
 	for file in files:
 		if file[-9:] == ".markdown":
 			markdown_files['%s/%s' % (post_dir, file)] = '%s/%s.html' % (stage_dir, file)
-		if file[-5:].lower() == ".jpeg" or file[-4:].lower() == ".jpg":
+		if file[-5:].lower() == ".jpeg" or file[-4:].lower() == ".jpg" or file[-4:].lower() == ".png":
 			shutil.copyfile('%s/%s' % (post_dir, file), '%s/%s' % (stage_dir, file))
 	
 	template_header = []
@@ -92,7 +92,7 @@ def extract(options):
 	for file in os.listdir(stage_dir):
 		if file[-14:] == ".markdown.html":
 			files['%s/%s' % (stage_dir, file)] = '%s/%s' % (post_dir, file[:-5])
-		if file[-5:].lower() == ".jpeg" or file[-4:].lower() == ".jpg":
+		if file[-5:].lower() == ".jpeg" or file[-4:].lower() == ".jpg" or file[-4:].lower() == ".png":
 			shutil.copyfile('%s/%s' % (stage_dir, file), '%s/%s' % (post_dir, file))
 	
 	for staging_file, markdown_file in files.iteritems():
