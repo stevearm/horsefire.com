@@ -3,13 +3,14 @@
 	<a name="${post.slug}"></a>
 	<h1 class='post-title'><a href="${post.permapath()}">${post.title}</a></h1>
 	<div class="post-prose">${self.post_prose(post)}</div>
-	<div class='post-footer'>
-		<div class='post-timestamp'>
-			Posted by stevearm at
-			<abbr class='published' title='${post.date.strftime("%Y-%m-%dT%H:%M:%S-%Z")}'>
-				${post.date.strftime("%I:%M %p")}
-			</abbr>
-		</div>
+</div>
+<div class='post-footer'>
+	<div class='post-timestamp'>
+		Posted by stevearm at
+		<abbr class='published' title='${post.date.strftime("%Y-%m-%dT%H:%M:%S-%Z")}'>
+			${post.date.strftime("%I:%M %p")}
+		</abbr>
+	</div>
 
 <%
 	category_links = []
@@ -20,9 +21,8 @@
 		else:
 			category_links.append("<a href='%s' rel='tag'>%s</a>" % (category.path, category.name))
 %>
-		<div class='post-labels'>
-			Labels: ${", ".join(category_links)}
-		</div>
+	<div class='post-labels'>
+		Labels: ${", ".join(category_links)}
 	</div>
 </div>
 

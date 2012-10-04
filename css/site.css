@@ -101,7 +101,7 @@ border-width:0;
 	margin: 10px;
 }
 
-.post .post-footer {
+.post-footer {
 	margin-left: 20px;
 	color: #aaaaaa;
 	font-size: 70%;
@@ -111,4 +111,8 @@ border-width:0;
 
 .clear {
 	clear:both;
+}
+
+#disqus_thread {
+	margin: 20px;
 }
