@@ -46,4 +46,4 @@ It probably is, so if you want, go with the bare minimum:
 * Choose password #2, and only use it for email
 * Choose password #3, and use it for most of the rest of your crap
 
-With this, if a site using password #3 gets compromised, you might loose access to all the other sites using password #3. Your email and banking would still be safe though. This kind of "security zone" approach is a nice middle ground between one password everywhere (insecure, but no work), and every site has it's own password (very secure, but lots of work).
+With this, if a site using password #3 gets compromised, you might loose access to all the other sites using password #3. Your email and banking would still be safe though. This kind of "security zone" approach is a nice middle ground between one password everywhere (insecure, but no work), and every site having it's own password (very secure, but lots of work).
