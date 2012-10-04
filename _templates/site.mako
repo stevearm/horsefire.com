@@ -9,10 +9,10 @@
 		<link rel="alternate" type="application/rss+xml" title="${bf.config.blog.name} - RSS" href="${bf.config.blog.path}/feed/index.xml" />
 
 		<title>${bf.config.blog.name}</title>
-		<link type="text/css" rel="stylesheet" href="/css/site.css"/>
+		<link type="text/css" rel="stylesheet" href="/site.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Squada+One|Marmelad' rel='stylesheet' type='text/css'>
 		<%block name="head"/>
-		
+
 		<!-- Google analytics -->
 		<script type="text/javascript">
   var _gaq = _gaq || [];
