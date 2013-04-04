@@ -1,2 +1,2 @@
 cd _site
-python -m SimpleHTTPServer
+python -m http.server
