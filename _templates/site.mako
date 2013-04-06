@@ -39,10 +39,12 @@
 			<ul>
 				<li id='current'><a href='${bf.util.site_path_helper()}'>Home</a></li>
 				<li><a href='${bf.util.site_path_helper(bf.config.blog.path)}'>Blog</a></li>
-				<li><a href='${bf.util.site_path_helper(bf.config.blog.path, 'feed')}'>Posts RSS</a></li>
-				% if bf.config.blog.disqus.enabled:
-				<li><a href='/some/disqus/url'>Comments RSS</a></li>
-				% endif
+				<li>
+					<a href='${bf.util.site_path_helper(bf.config.blog.path, 'feed')}'>Feed</a>
+					% if bf.config.blog.disqus.enabled:
+					(<a href='/some/disqus/url'>Comments</a>)
+					% endif
+				</li>
 			</ul>
 		</div>
 		<div class='nav-section'>
