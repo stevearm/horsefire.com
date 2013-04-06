@@ -25,7 +25,7 @@ markdown_post_tag = '</div><!-- markdown post tag -->'
 
 def stage(template_file, options):
 	if not os.path.isdir(post_dir):
-		print "%s is not a folder" % post_dir
+		print("%s is not a folder" % post_dir)
 		return
 	if not os.path.isdir(stage_dir):
 		os.mkdir(stage_dir)
@@ -57,8 +57,9 @@ def stage(template_file, options):
 		template_line = i.read()
 	i.close()
 	
-	for markdown_file, staging_file in markdown_files.iteritems():
-		print 'Created %s' % staging_file
+	for markdown_file in markdown_files:
+		staging_file = markdown_files[markdown_file]
+		print('Created %s' % staging_file)
 		o = open(staging_file, 'w')
 		for line in template_header:
 			o.write('%s\n' % line)
@@ -82,10 +83,10 @@ def stage(template_file, options):
 
 def extract(options):
 	if not os.path.isdir(post_dir):
-		print "%s is not a folder" % post_dir
+		print("%s is not a folder" % post_dir)
 		return
 	if not os.path.isdir(stage_dir):
-		print "%s is not a folder" % stage_dir
+		print("%s is not a folder" % stage_dir)
 		return
 	
 	files = {}
@@ -95,8 +96,9 @@ def extract(options):
 		if file[-5:].lower() == ".jpeg" or file[-4:].lower() == ".jpg" or file[-4:].lower() == ".png":
 			shutil.copyfile('%s/%s' % (stage_dir, file), '%s/%s' % (post_dir, file))
 	
-	for staging_file, markdown_file in files.iteritems():
-		print 'Extracted %s' % markdown_file
+	for staging_file in files:
+		markdown_file = files[staging_file]
+		print('Extracted %s' % markdown_file)
 		i = open(staging_file, 'r')
 		line_number = 0
 		current_line = i.read().splitlines()
@@ -107,7 +109,7 @@ def extract(options):
 			if line_number == len(current_line):
 				current_line = i.read().splitlines()
 				if len(current_line) == 0:
-					print 'Failed to find the pre tag in %s' % staging_file
+					print('Failed to find the pre tag in %s' % staging_file)
 					return
 				line_number = 0
 		
@@ -116,12 +118,12 @@ def extract(options):
 		while True:
 			if current_line[line_number] == markdown_post_tag:
 				break
-			o.write('%s\n' % current_line[line_number])
+			o.write(bytes('%s\n' % current_line[line_number], 'UTF-8'))
 			line_number = line_number + 1
 			if line_number == len(current_line):
 				current_line = i.read().splitlines()
 				if len(current_line) == 0:
-					print 'Failed to find the pre tag in %s' % staging_file
+					print('Failed to find the pre tag in %s' % staging_file)
 					return
 				line_number = 0
 		
@@ -136,15 +138,15 @@ def main():
 	options, arguments = p.parse_args()
 	
 	if len(arguments) == 0:
-		print 'Must specify mode as stage or extract'
+		print('Must specify mode as stage or extract')
 		return
 	mode = arguments[0]
 	if mode == 'stage':
 		if len(arguments) == 1:
-			print 'Staging must specify a rendered permapage for a blog entry'
+			print('Staging must specify a rendered permapage for a blog entry')
 			return
 		if not options.post:
-			print 'Must specify a javascript selector using --post'
+			print('Must specify a javascript selector using --post')
 			return
 		if not options.title:
 			options.title = "null"
@@ -155,7 +157,7 @@ def main():
 	elif mode == 'extract':
 		extract(options)
 	else:
-		print 'Unknown mode: %s' % mode
+		print('Unknown mode: %s' % mode)
 
 if __name__ == '__main__':
 	main()
