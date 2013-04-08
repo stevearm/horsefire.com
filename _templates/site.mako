@@ -50,7 +50,7 @@
 		<div class='nav-section'>
 			<h2 class='nav-title'>Recent Posts</h2>
 			<ul>
-			% for post in bf.config.blog.posts[:3]:
+			% for post in [ post for post in bf.config.blog.posts if not post.draft][:3]:
 				<li><span class="item-title"><a href="${post.path}">${post.title}</a></span></li>
 			% endfor
 			</ul>
