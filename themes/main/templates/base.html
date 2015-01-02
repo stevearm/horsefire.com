@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+    <head>
+        {% block head %}
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+        <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+
+        {% if FEED_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+        {% endif %}
+        {% if FEED_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+        {% endif %}
+
+        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+        <link type="text/css" rel="stylesheet" href="/theme/site.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Squada+One|Marmelad' rel='stylesheet' type='text/css'>
+
+        {% if GOOGLE_ANALYTICS %}
+        <!-- Google analytics -->
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ GOOGLE_ANALYTICS }}']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+        </script>
+        {% endif %}
+
+        {% endblock head %}
+    </head>
+    <body>
+
+<div id='wrapper'>
+    <div id='header'>
+        <img src="/theme/logo.jpg"/>
+        <h1 class='title'>{{ SITENAME }}</h1>
+        <p class='description'>{{ SITESUBTITLE }}</p>
+    </div>
+    <div id='navigation'>
+        <div class='nav-section'>
+            <h2 class='nav-title'>Site map</h2>
+            <ul>
+                <li id='current'><a href='/'>Home</a></li>
+                <li><a href='/blog'>Blog</a></li>
+            </ul>
+        </div>
+        <div class='nav-section'>
+            <h2 class='nav-title'>Recent Posts</h2>
+            <ul>
+            {% for post in articles[-4:] %}
+                <li><span class="item-title"><a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a></span></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class='nav-section'>
+            <h2 class='nav-title'>Labels</h2>
+            <ul>
+            {% for tag, articles in tags %}
+                <li>
+                    <a dir='ltr' href='{{ SITEURL }}/{{ tag.url }}'>{{ tag.name }}</a>
+                    <span>({{ articles |count }})</span>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class='nav-section'>
+            <h2 class='nav-title'>Blog Archive</h2>
+            <ul>
+            {% for month, articles in archive_month %}
+                <li>
+                    <a dir='ltr' href='{{ SITEURL }}/blog/{{ month |strftime('%Y') }}/{{ month |strftime('%m') }}'>
+                        {{ month |strftime('%B %Y') }}
+                    </a>
+                    <span dir='ltr'>({{ articles |count }})</span>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div id='content'>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class='clear' id='footer'></div>
+</div>
+
+{% if DISQUS_SITENAME %}
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = '{{ DISQUS_SITENAME }}';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+{% endif %}
+    </body>
+</html>

@@ -1,5 +1,5 @@
-_site
-_staging/*.markdown.html
-_staging/*.JPG
-_staging/*.png
+/cache
+/output
+*.pyc
 *~
+/serve.sh

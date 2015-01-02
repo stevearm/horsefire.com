@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class='post'>
+    <a name="{{ article.slug }}"></a>
+    <h1 class='post-title'><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title|striptags }}</a></h1>
+    <div class="post-prose">{{ article.content }}</div>
+</div>
+<div class='post-footer'>
+    <div class='post-timestamp'>
+        Posted by {% for author in article.authors %}{{author}}{% endfor %} at
+        <abbr class='published' title='{{ article.date.isoformat() }}'>
+            {{ article.locale_date}}
+        </abbr>
+    </div>
+
+    <div class='post-labels'>Labels:
+{% for tag in article.tags %}
+        <a href='{{ SITEURL }}/tags/{{ tag.url }}' rel='tag'>{{ tag.name }}</a>,
+{% endfor %}
+    </div>
+</div>
+{% endblock %}
