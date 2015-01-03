@@ -1,8 +1,7 @@
----
-categories: security
-date: 2012/09/22 12:53:00
-title: Protect yourself from security failures
----
+Title: Protect yourself from security failures
+Date: 2012-09-22T12:53:00
+Tags: security
+
 While it might not be on mainstream news, internet nerds like myself have been hearing about security breaches pretty often lately.
 
 * June - [E-Harmony looses 1.5 million passwords](http://www.h-online.com/security/news/item/eHarmony-admits-to-leaking-1-5-million-passwords-1612654.html)

@@ -1,8 +1,7 @@
----
-categories: organization
-date: 2009/02/11 20:00:00
-title: Information Overload
----
+Title: Information Overload
+Date: 2009-02-11T20:00:00
+Tags: organization
+
 People today have lots to do, and lots to remember. Some have a system to keep all of this organized. I don't. I have 3 or 4 half-assed systems.
 
 The first problem is "What data am I talking about" as there's a bunch of different types:

@@ -1,10 +1,6 @@
----
-categories: security, free speech, surveillance
-date: 2013/04/06 11:47:00
-title: The Chilling Effect
----
-This summer, [Edward Snowden](http://en.wikipedia.org/wiki/Edward_Snowden) leaked a bunch of information on the level of surveillance being done by the NSA and various other domestic and international agencies. While many technologists and security experts have said they are not surprised, I think this is an important revelation for the general public. 
-
+Title: Initial rant on patents
+Date: 2013-04-06T11:47:00
+Tags: patents
 
 My take on patents is what you might call "evolving". You might also call it "random" or "wishy-washy", but that would be mean. I want to write this post so later I can refer to what I thought in the past to see if my viewpoint is at least converging on something. Also writing helps me sort out my thoughts.
 

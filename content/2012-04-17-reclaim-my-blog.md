@@ -1,8 +1,7 @@
----
-categories: meta
-date: 2012/04/17 10:05:00
-title: Reclaiming my blog
----
+Title: Reclaiming my blog
+Date: 2012-04-17T10:05:00
+Tags: meta
+
 Well, I'm trying to launch a new blog. I barely ever used the ready-to-go free-of-charge [Blogger](http://www.blogger.com), so I'm learning my lesson and attempting to use a mostly abandoned open source static site generator. I'm sure this will result in a more steady update schedule.
 
 I'm using [Blogofile](http://www.blogofile.com/), which is a python static site generator. Given a directory of [Markdown](http://daringfireball.net/projects/markdown/) posts and [mako](http://www.makotemplates.org/) html templates, it will generate a fully static website. This has a number of benefits:

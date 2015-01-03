@@ -1,9 +1,8 @@
----
-categories: debugging, java
-date: 2009/08/10 21:24:00
-title: Another rabbit hole
----
-In the interest of making a post (I haven't for a long time), here's another debugging wild goose chase, and how making assumptions was the wrong thing to do (a lesson I should have learned [earlier](/blog/2009/02/19/how-big-is-your-problem-domain-/).
+Title: Another rabbit hole
+Date: 2009-08-10T21:24:00
+Tags: debugging, java
+
+In the interest of making a post (I haven't for a long time), here's another debugging wild goose chase, and how making assumptions was the wrong thing to do (a lesson I should have learned [earlier](/blog/2009/02/19/how-big-is-your-problem-domain/).
 
 We make a physical product at work (among other things). It has a PPC chip on it that runs Linux, on which we run our application. Our app is written in Java, contains a web server (Jetty), and uses GWT for it's user interface. To get Java running on the device, we use GCJ to compile everything into a binary. With all these layers, most of which are either in-house software or seldom-used open source software, there's a lot of unknown interactions. And nothing brings every single piece of the chain into question like general problems such as "it's running too slow" or, in my case: "it's leaking memory".
 

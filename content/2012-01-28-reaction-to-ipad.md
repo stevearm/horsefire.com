@@ -1,8 +1,7 @@
----
-categories: apple
-date: 2010/01/28 10:00:00
-title: My Linux hippie reaction to the iPad
----
+Title: My Linux hippie reaction to the iPad
+Date: 2010-01-28T10:00:00
+Tags: apple
+
 So the [iPad](http://www.apple.com/ipad/) was announced yesterday. It's just a big iPhone, not a small Mac, but it's also one of the sleekest pieces of hardware I've seen in a while.
 
 I've worried for a while about the iPhone and AppStore problem. The iPhone is amazing, there's no arguing against it. The AppStore, on the other hand, worries me. Apple has been unapologetic about blocking and rejecting apps they don't like. The Google Voice app, which I'm sure didn't have any quality or security issues, was [rejected](http://www.techcrunch.com/2009/07/27/apple-is-growing-rotten-to-the-core-and-its-likely-atts-fault/). While this case was probably driven by AT&T, it still leaves the door open for Apple to dictate everything about what software is allowed on the iPhone, and part of me bristles at that.
@@ -19,6 +18,6 @@ So really, I wish I could get Apple's build quality with Android's freedom. Yes,
 
 In the end, I'll keep hoping Android comes up with something even remotely competitive hardware-wise, and the mean time, I might just buy an iPad or iPhone. While I couldn't program like I do on my laptop, for most other things, it would just work.
 
-<sub><sup>This article is pretty jumbled, which sort of reflects my uncertain stance on this whole thing.</sup></sub>
+<sub>This article is pretty jumbled, which sort of reflects my uncertain stance on this whole thing.</sub>
 
 **EDIT** 10:48AM - [This article](http://danieltenner.com/posts/0015-ipad-an-apple-for-mom.html) better describes why the iPad will succeed than I was able to

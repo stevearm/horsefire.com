@@ -1,8 +1,7 @@
----
-categories: http, caching, squid
-date: 9999/99/99 11:47:00
-title: Http caching
----
+Title: Http caching
+Tags: http, caching, squid
+Status: draft
+
 Squid (and really any caching proxy) is a fantastic idea. Put a server between the internet and your web server, set it up as a caching proxy, and it'll "protect" your server from the load of any duplicate requests. All your server needs to do is tell squid what's safe to cache, and what isn't. That means understanding [HTTP's cache headers|http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.1]. I've had to look this up too many times, so here is my attempt at a summary that will help me get up to speed next time I need to fiddle with them.
 
 ## Basic concept
