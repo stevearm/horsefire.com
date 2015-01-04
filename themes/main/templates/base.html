@@ -51,7 +51,7 @@
         <div class='nav-section'>
             <h2 class='nav-title'>Recent Posts</h2>
             <ul>
-            {% for post in articles[-4:] %}
+            {% for post in articles[:4] %}
                 <li><span class="item-title"><a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a></span></li>
             {% endfor %}
             </ul>
