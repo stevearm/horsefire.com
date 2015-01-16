@@ -17,7 +17,7 @@ Get ahold of me: [![email](/images/email.png)][email] [![twitter](/images/twitte
 
 [blog]: http://horsefire.com/blog
 [github-stevearm]: https://github.com/stevearm
-[github-stevearm]: https://github.com/stephenarmstrong
+[github-stephenarmstrong]: https://github.com/stephenarmstrong
 [gwt-amp]: http://code.google.com/p/gwtamp/
 [stevearm.com]: http://stevearm.com/
 [cross-the-streams]: http://www.youtube.com/watch?v=jyaLZHiJJnE
