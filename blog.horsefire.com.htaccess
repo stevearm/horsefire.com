@@ -1,0 +1,11 @@
+# Redirects for blog.horsefire.com domain
+
+RewriteEngine On
+
+RewriteRule ^$                                              http://horsefire.com/blog/                                                  [R=301]
+RewriteRule ^2010/01/my-linux-hippie-reaction-to-ipad.html$ http://horsefire.com/blog/2010/01/28/my-linux-hippie-reaction-to-the-ipad/  [R=301]
+RewriteRule ^2009/08/another-rabbit-hole.html$              http://horsefire.com/blog/2009/08/10/another-rabbit-hole/                   [R=301]
+RewriteRule ^2009/02/how-big-is-your-problem-domain.html$   http://horsefire.com/blog/2009/02/19/how-big-is-your-problem-domain/        [R=301]
+RewriteRule ^2009/02/information-overload.html$             http://horsefire.com/blog/2009/02/11/information-overload/                  [R=301]
+RewriteRule ^2009/02/code-highlighting-on-blogger.html$     http://horsefire.com/blog/2009/02/05/code-highlighting-on-blogger/          [R=301]
+RewriteRule ^2009/02/always-wanting-to-know-more.html$      http://horsefire.com/blog/2009/02/03/always-wanting-to-know-more/           [R=301]
