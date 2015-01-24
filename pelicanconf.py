@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+from   __future__ import unicode_literals
+import os
 
 AUTHOR = u'Steve Armstrong'
 SITENAME = u'horsefire'
@@ -13,8 +14,7 @@ DEFAULT_LANG = u'en'
 PATH = 'content'
 
 # Files/folders in PATH that will be copied instead of parsed
-STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
-# TEMPLATE_PAGES = {'templates/index.html': 'index.html'}
+STATIC_PATHS = ['images', 'extra']
 
 INDEX_SAVE_AS = 'blog/index.html'
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
@@ -31,9 +31,12 @@ AUTHORS_SAVE_AS = ''
 THEME = 'themes/main'
 
 # Move files from their default location
+# Using os.path.join() since the path must be os-specific (and I use Windows & Linux)
+# Perhaps offer pull request against https://github.com/getpelican/pelican/issues/1133
+# with an option to treat paths as os-agnostic
 EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'}
+    os.path.join('extra', 'robots.txt'): {'path': 'robots.txt'},
+    os.path.join('extra', 'favicon.ico'): {'path': 'favicon.ico'}
 }
 
 # Add plugin
