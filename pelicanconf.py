@@ -40,7 +40,7 @@ EXTRA_PATH_METADATA = {
 }
 
 # Add plugin
-PLUGIN_PATH = 'plugins'
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ['main', ]
 
 # Development-specific settings (these must be overridden for publishing)
