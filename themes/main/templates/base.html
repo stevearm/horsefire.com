@@ -13,8 +13,22 @@
         {% endif %}
 
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-        <link type="text/css" rel="stylesheet" href="/theme/site.css"/>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Squada+One|Marmelad' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/theme/site.css"/>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
         {% if GOOGLE_ANALYTICS %}
         <!-- Google analytics -->
@@ -33,60 +47,65 @@
         {% endblock head %}
     </head>
     <body>
-
-<div id='wrapper'>
-    <div id='header'>
-        <img src="/theme/logo.jpg"/>
-        <h1 class='title'>{{ SITENAME }}</h1>
-        <p class='description'>{{ SITESUBTITLE }}</p>
-    </div>
-    <div id='navigation'>
-        <div class='nav-section'>
-            <h2 class='nav-title'>Site map</h2>
-            <ul>
-                <li id='current'><a href='/'>Home</a></li>
-                <li><a href='/blog'>Blog</a></li>
-            </ul>
-        </div>
-        <div class='nav-section'>
-            <h2 class='nav-title'>Recent Posts</h2>
-            <ul>
-            {% for post in articles[:4] %}
-                <li><span class="item-title"><a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a></span></li>
-            {% endfor %}
-            </ul>
-        </div>
-        <div class='nav-section'>
-            <h2 class='nav-title'>Labels</h2>
-            <ul>
-            {% for tag, articles in tags %}
-                <li>
-                    <a dir='ltr' href='{{ SITEURL }}/{{ tag.url }}'>{{ tag.name }}</a>
-                    <span>({{ articles |count }})</span>
-                </li>
-            {% endfor %}
-            </ul>
-        </div>
-        <div class='nav-section'>
-            <h2 class='nav-title'>Blog Archive</h2>
-            <ul>
-            {% for month, articles in archive_month %}
-                <li>
-                    <a dir='ltr' href='{{ SITEURL }}/blog/{{ month |strftime('%Y') }}/{{ month |strftime('%m') }}'>
-                        {{ month |strftime('%B %Y') }}
-                    </a>
-                    <span dir='ltr'>({{ articles |count }})</span>
-                </li>
-            {% endfor %}
-            </ul>
-        </div>
-    </div>
-    <div id='content'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6" id="#header">
+                    <img src="/theme/logo.jpg"/>
+                    <h1 class='title'>{{ SITENAME }}</h1>
+                    <p class='description'>{{ SITESUBTITLE }}</p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-2" id="#navigation">
+                    <div class='nav-section'>
+                        <h2 class='nav-title'>Site map</h2>
+                        <ul>
+                            <li id='current'><a href='/'>Home</a></li>
+                            <li><a href='/blog'>Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class='nav-section'>
+                        <h2 class='nav-title'>Recent Posts</h2>
+                        <ul>
+                        {% for post in articles[:4] %}
+                            <li><span class="item-title"><a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a></span></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class='nav-section'>
+                        <h2 class='nav-title'>Labels</h2>
+                        <ul>
+                        {% for tag, articles in tags %}
+                            <li>
+                                <a dir='ltr' href='{{ SITEURL }}/{{ tag.url }}'>{{ tag.name }}</a>
+                                <span>({{ articles |count }})</span>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class='nav-section'>
+                        <h2 class='nav-title'>Blog Archive</h2>
+                        <ul>
+                        {% for month, articles in archive_month %}
+                            <li>
+                                <a dir='ltr' href='{{ SITEURL }}/blog/{{ month |strftime('%Y') }}/{{ month |strftime('%m') }}'>
+                                    {{ month |strftime('%B %Y') }}
+                                </a>
+                                <span dir='ltr'>({{ articles |count }})</span>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4" id="content">
         {% block content %}
         {% endblock %}
-    </div>
-    <div class='clear' id='footer'></div>
-</div>
-
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
     </body>
 </html>

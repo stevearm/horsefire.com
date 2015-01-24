@@ -4,6 +4,7 @@ body {
 	font-family: 'Marmelad', sans-serif;
 }
 
+/* @media (min-width: 768px) { */
 #wrapper {
 	background: #ffffff;
 	width: 900px;
