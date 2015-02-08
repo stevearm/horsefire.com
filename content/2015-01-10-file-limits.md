@@ -21,7 +21,7 @@ Oh, they just [hard code the limit in the init script][cassandra-init]
     FD_LIMIT=100000
     ulimit -n 100000
 
-Cheaters. If only they admitted this in their [docs][recommend], I wouldn't have gone down the wrong path.
+Cheaters. If only they admitted this in their [docs][cassandra-limits], I wouldn't have gone down the wrong path.
 
 [kafka]: http://kafka.apache.org/
 [cassandra-limits]: http://www.datastax.com/documentation/cassandra/2.0/cassandra/install/installRecommendSettings.html
