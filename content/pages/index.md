@@ -7,7 +7,6 @@ Welcome to the nexus of my various technology activities and ideas. From here, y
 * The [blog][blog] convering topics from programming to security to IP law
 * My personal [GitHub page][github-stevearm] containing a few of my projects, mostly Java heavy
 * My professional [GitHub page][github-stephenarmstrong] used for work, which contains some public contributions
-* An old GWT-PHP bridge library called [gwt-amp][gwt-amp] on Google Code
 
 ### About me
 
