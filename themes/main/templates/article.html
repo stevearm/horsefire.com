@@ -15,7 +15,7 @@
 
     <div class='post-labels'>Labels:
 {% for tag in article.tags %}
-        <a href='{{ SITEURL }}/tags/{{ tag.url }}' rel='tag'>{{ tag.name }}</a>,
+        <a href='{{ SITEURL }}/{{ tag.url }}' rel='tag'>{{ tag.name }}</a>,
 {% endfor %}
     </div>
 </div>
