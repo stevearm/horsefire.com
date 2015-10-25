@@ -4,9 +4,9 @@ save_as: index.html
 
 Welcome to the nexus of my various technology activities and ideas. From here, you can check out:
 
-* The [blog][blog] convering topics from programming to security to IP law
-* My personal [GitHub page][github-stevearm] containing a few of my projects, mostly Java heavy
-* My professional [GitHub page][github-stephenarmstrong] used for work, which contains some public contributions
+* The [blog][blog] covering topics from programming to security to IP law
+* My [stevearm@GitHub][github-stevearm] personal account containing a few of my projects
+* My [sarmstrong@GitHub][github-stephenarmstrong] work account, which contains some public contributions
 
 ### About me
 
