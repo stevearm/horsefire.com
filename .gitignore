@@ -2,5 +2,4 @@
 /output
 *.pyc
 *~
-/serve.sh
-/build.sh
+/env
