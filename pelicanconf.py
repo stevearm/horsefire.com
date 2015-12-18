@@ -43,6 +43,9 @@ EXTRA_PATH_METADATA = {
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['main', ]
 
+# Markdown extensions
+MD_EXTENSIONS = ['toc']
+
 # Development-specific settings (these must be overridden for publishing)
 
 RELATIVE_URLS = True
