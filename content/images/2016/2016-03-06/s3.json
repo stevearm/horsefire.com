@@ -1,0 +1,9 @@
+{
+    "auth": "localhost",
+    "listen": ":3179",
+    "identity": "45CD3E28",
+    "identitySecretRing": "/home/steve/.config/camlistore/identity-secring.gpg",
+    "s3": "mykey:mysecret:mybucket",
+    "levelDB": "/home/steve/var/camlistore/index.leveldb",
+    "dbNames": null
+}

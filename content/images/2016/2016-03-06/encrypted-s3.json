@@ -1,0 +1,130 @@
+{
+  "auth": "localhost",
+  "handlerConfig": true,
+  "https": false,
+  "listen": ":3179",
+  "prefixes": {
+    "/": {
+      "handler": "root",
+      "handlerArgs": {
+        "blobRoot": "/bs-and-maybe-also-index/",
+        "helpRoot": "/help/",
+        "jsonSignRoot": "/sighelper/",
+        "searchRoot": "/my-search/",
+        "statusRoot": "/status/",
+        "stealth": false
+      }
+    },
+    "/bs-and-index/": {
+      "handler": "storage-replica",
+      "handlerArgs": {
+        "backends": [
+          "/bs/",
+          "/index/"
+        ]
+      }
+    },
+    "/bs-and-maybe-also-index/": {
+      "handler": "storage-cond",
+      "handlerArgs": {
+        "read": "/bs/",
+        "write": {
+          "else": "/bs/",
+          "if": "isSchema",
+          "then": "/bs-and-index/"
+        }
+      }
+    },
+    "/bs/": {
+      "handler": "storage-encrypt",
+      "handlerArgs": {
+        "I_AGREE": "that encryption support hasn't been peer-reviewed, isn't finished, and its format might change.",
+        "metaIndex": {
+          "type": "leveldb",
+          "file": "/home/steve/var/camlistore/encrypt.leveldb"
+        },
+        "key": "myencryptionkey",
+        "blobs": "/s3-blobs/",
+        "meta":"/s3-meta/"
+      }
+    },
+    "/s3-blobs/": {
+      "handler": "storage-s3",
+      "handlerArgs": {
+        "aws_access_key": "mykey",
+        "aws_secret_access_key": "mysecret",
+        "bucket": "mybucket/blobs"
+      }
+    },
+    "/s3-meta/": {
+      "handler": "storage-s3",
+      "handlerArgs": {
+        "aws_access_key": "mykey",
+        "aws_secret_access_key": "mysecret",
+        "bucket": "mybucket/meta"
+      }
+    },
+    "/cache/": {
+      "handler": "storage-filesystem",
+      "handlerArgs": {
+        "path": "/tmp/camli-cache"
+      }
+    },
+    "/help/": {
+      "handler": "help"
+    },
+    "/importer/": {
+      "handler": "importer",
+      "handlerArgs": {}
+    },
+    "/index/": {
+      "handler": "storage-index",
+      "handlerArgs": {
+        "blobSource": "/bs/",
+        "storage": {
+          "file": "/home/steve/var/camlistore/index.leveldb",
+          "type": "leveldb"
+        }
+      }
+    },
+    "/my-search/": {
+      "handler": "search",
+      "handlerArgs": {
+        "index": "/index/",
+        "owner": "sha1-84fd87d083aa841af98b46fafab54bc241b9dfa7",
+        "slurpToMemory": true
+      }
+    },
+    "/setup/": {
+      "handler": "setup"
+    },
+    "/sighelper/": {
+      "handler": "jsonsign",
+      "handlerArgs": {
+        "keyId": "45CD3E28",
+        "publicKeyDest": "/bs-and-index/",
+        "secretRing": "/home/steve/.config/camlistore/identity-secring.gpg"
+      }
+    },
+    "/status/": {
+      "handler": "status"
+    },
+    "/sync/": {
+      "handler": "sync",
+      "handlerArgs": {
+        "from": "/bs/",
+        "queue": {
+          "file": "/home/steve/var/camlistore/sync-to-index-queue.leveldb",
+          "type": "leveldb"
+        },
+        "to": "/index/"
+      }
+    },
+    "/ui/": {
+      "handler": "ui",
+      "handlerArgs": {
+        "cache": "/cache/"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "auth": "localhost",
+    "listen": ":3179",
+    "identity": "45CD3E28",
+    "identitySecretRing": "/home/steve/.config/camlistore/identity-secring.gpg",
+    "blobPath": "/home/steve/var/camlistore/blobs",
+    "packRelated": true,
+    "levelDB": "/home/steve/var/camlistore/index.leveldb",
+    "dbNames": null
+}
