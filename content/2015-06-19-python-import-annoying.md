@@ -10,24 +10,25 @@ I have 5 python files:
 
     import a, b
 
-**~/a.py**
+**~/a.py**:
 
     import lib.c
 
-**~/b.py**
+**~/b.py**:
 
     import lib.d
     print "b.py called lib.c.test(): {}".format(lib.c.test())
     print "b.py called lib.d.test(): {}".format(lib.d.test())
 
-**~/lib/a.py**
+**~/lib/c.py**:
 
     def test():
         return "c reply"
 
-**~/lib/b.py**
+**~/lib/d.py**:
+
     def test():
-        return "c reply"
+        return "d reply"
 
 I also have a blank **__init__.py** in the `/` and `/lib` folders, and each `.py` file starts with `#!/usr/bin/env python`.
 
