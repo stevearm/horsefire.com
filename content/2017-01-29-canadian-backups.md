@@ -19,15 +19,12 @@ Nope
 * [Carbonite](https://www.carbonite.com/) has a great user experience, but I chatted with a customer rep on yesterday and they confirmed they only have US servers.
 * [Canadian Cloud Backup](http://canadiancloudbackup.com/faqs/) explicitly keeps data in Canada, but it looks like it's a B2B product so you're not going to have a good time as an end-user.
 * [Microsoft OneDrive](https://onedrive.live.com/about/en-ca/plans/) is an consumer folder backup/sync thing like Dropbox. Apparently Microsoft Cloud now has [Canadian datacenters](https://www.microsoft.com/en-ca/sites/datacentre/default.aspx), but today a Microsoft rep confirmed that data locality is handled automatically and they can't promise it will stay in Canada. They a bunch of things about data on servers not being subject to policies of the region where the server resides, but from a legal perspective, that's nonsense.
+* [Dropbox](https://www.dropbox.com/) is great to use, but despite [this list][Canadian-backup-list], I confirmed on 2017-02-02 that all your data is on US servers, and Dropbox (the company) has the keys. No matter how good their security is to keep an employee from reading your files, if the government orders them to hand over your files, they can, and will (because they legally have to).
 
 Maybe
 -----
 * [Sync.com](https://www.sync.com/blog/a-secure-canadian-dropbox-alternative/) is explicitly styled as a Dropbox alternative. Reviews look good for consumer experience, and they use Canadian servers. Try it out using the [free 5 GB plan](https://www.sync.com/pricing/), and put your data in the *Vault* feature. The *Files* feature works like Dropbox and syncs, but a deleted file is deleted everywhere. *Vault* lets you go back 30 days, so if your computer encrypts/deletes everything, you can still go back to get the original files. They use zero-knowledge encryption (this means even they can't read your files), so if you loose your password, your backups can't be decoded. Write down your password, and make sure it's somewhere that, if your house burned down with your computer inside it, you'd still have it.
 * [Backblaze](https://www.backblaze.com/) is another great user experience with good pricing. Despite [this list][Canadian-backup-list] saying they have Canadian servers, yesterday Backblaze confirmed to me they don't have, or plan to have, Canadian servers. However, their page describing [the encryption setup](https://help.backblaze.com/hc/en-us/articles/217664688-Can-you-tell-me-more-about-the-encryption-Backblaze-uses-) says that you can use your own password to encode the backups. This would mean Backblaze (and the US Government) can't decode the backups, but just like Sync.com, if you loose that password your backups are useless.
-
-Need more info
---------------
-* [Dropbox](https://www.dropbox.com/) is great to use, but I don't know where their data goes. [This list][Canadian-backup-list] says they have Canadian servers, but I sent out a request yesterday to confirm.
 * [Eazy Backup](https://eazybackup.ca/pricing/) keeps your data in Canada, but it is a bit expensive and I have no idea how easy to use it is.
 
 Conclusion
