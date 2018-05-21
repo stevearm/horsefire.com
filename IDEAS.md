@@ -12,3 +12,11 @@ This file exists only to throw down links or one-liners for things that might be
 
 Distributed web
 * What is [MaidSafe](https://en.wikipedia.org/wiki/MaidSafe#Self-Encrypted_Data)?
+
+Misc
+* Write a response to [Steve Yegge](http://steve.yegge.googlepages.com/ten-predictions) (write my own predictions as an exercise)
+* Write a short blog post talking about chilling effects of surveillance. This is mostly to provide a link page for things I want to remember
+  * Use [Ben's letter](http://benlog.com/2013/08/19/letter-to-president-obama-on-surveillance-and-freedom/) as a template/reference, and maybe explicitly reference it
+  * Talk about [Groklaw closing](http://www.theguardian.com/technology/2013/aug/20/groklaw-shuts-nsa-surveillance) ([discussion](https://news.ycombinator.com/item?id=6243081)) ([better discussion](https://news.ycombinator.com/item?id=6242569))
+  * [metadata from gmail](http://www.npr.org/blogs/alltechconsidered/2013/08/22/214172709/how-a-look-at-your-gmail-reveals-the-power-of-metadata)
+* Interesting comment about [enforcing the letter of the law vs the goal the law intended to produce](https://news.ycombinator.com/item?id=5668360) (from [a post about licence plate readers](https://news.ycombinator.com/item?id=5667911))
