@@ -2,6 +2,9 @@
 
 This file exists only to throw down links or one-liners for things that might be worth reading about
 
+* HTTP3 is being standardized to mean HTTP + [QUIC](https://www.chromium.org/quic) + TLS. It has connection migration, so does that mean I can do a terrible reflection attack?
+    1. Do an initial handshake as myself to an innocent bystander server, which requires multiple round-trips
+    1. Send a fake GET "from" my target's IP using my session id. If this doesn't require a round-trip, it will end up streaming the full response to my target
 * A Lebanese ISP is setting itself up to [man-in-the-middle](http://security.stackexchange.com/questions/80662/i-cant-access-websites-that-use-https-instead-getting-the-message-your-connec) all it's customer's traffic
 * Python 2.7's argparse does not work correctly with subparsers. If you define `--verbose` on the top level, and have a subparser for `run`, then running `script.py run --verbose` will fail. http://bugs.python.org/issue9253
 * [Software ethics](http://benlog.com/2015/05/23/the-responsibility-we-have-as-software-engineers/) - Should we have a Hippicratic Oath equivalent? Engineers don't trust computers, but "ask the computer, the computer knows and is always right" is a bad road. The computer knows nothing, it just gathers people's opinions. "Ask the computer" means "tell the computer to ask 1000 people and show the most frequent answers"
